@@ -1,0 +1,16 @@
+.number-row{
+    margin-top:20px;
+}
+
+.number-left{
+    padding: 70px;
+    background-color: red;
+}
+.number-center{
+    padding: 70px;
+    background-color: blue;
+}
+.number-right{
+    padding:70px;
+    background-color: green;
+}
