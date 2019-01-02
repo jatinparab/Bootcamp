@@ -3,6 +3,7 @@ h1 {
     color:white;
 }
 
+
 #middle-number{
     color:white;
 }
@@ -24,5 +25,10 @@ h1 {
 
 .number-center{
     background-color: blue;
+    padding:70px;
+}
+
+.number-clicked{
+    background-color: yellow;
     padding:70px;
 }

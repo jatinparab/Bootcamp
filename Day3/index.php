@@ -19,7 +19,7 @@
         <?php for($i=0; $i<3; $i++){ ?>
             <div class="row number-row">
                 <?php for($j=0; $j<3; $j++){ $number++; ?>
-                    <div class="col-sm-4 text-center number-<?php
+                    <div onclick="clicked('<?php echo $number; ?>')" id="number<?php echo $number; ?>" class="col-sm-4 text-center number-<?php
                     if($j == 0){
                         echo "left";
                     }
@@ -36,9 +36,22 @@
                 <?php } ?>
             </div>
         <?php } ?>
+        <h2 id="ct" >You just clicked</h2>
     </div>
-    
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+    function clicked(value){
+        $('#ct').html("You just clicked " + value);
+        $('#number'+value).addClass("number-clicked");
+    }
+    
+    
+    
+    </script>
 </body>
 
 </html>
