@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,18 +27,26 @@
                     <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mobiles</a>
+                    <a class="nav-link" href="index.php?category=Mobiles">Mobiles</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">TVs</a>
+                    <a class="nav-link" href="index.php?category=TVs">TVs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Laptops</a>
+                    <a class="nav-link" href="index.php?category=Laptops">Laptops</a>
                 </li>
 
             </ul>
-            <a href="cart.php"><button class="btn btn-outline-success my-2 mx-2 my-sm-0">View Cart</button></a>
+
+<?php if(isset($_SESSION['username'])){ ?>
+            <a href="cart.php"><button class="btn btn-outline-success my-2 mx-2 my-sm-0">Cart</button></a>
             <a href="logout.php"><button class="btn btn-outline-success my-2 my-sm-0">Logout</button></a>
+<?php }else { ?>
             <a href="login.php"><button class="btn btn-outline-success my-2 my-sm-0">Login</button></a>
+<?php  } ?>
+
         </div>
     </nav>
+
+
+   
