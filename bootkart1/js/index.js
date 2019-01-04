@@ -42,6 +42,22 @@ function addtocart(userid, productid){
     });
 }
 
+function getstudent(){
+    $.ajax({
+        type: "POST",
+        url: "test.php",
+        data: {
+            //data goes here
+            
+        },
+        success: function (data) {
+           //data is returned here
+           json = JSON.parse(data);
+           console.log(json);
+        }
+    });
+}
+
 
 
 function login(){
