@@ -17,7 +17,7 @@
             <div class="media-body">
                 <h5 class="mt-0 mb-1"><?=$product['name']?> - Rs.<?=$product['price']?></h5>
                 <?=$product['description']?>
-                <button class="btn btn-success btn-block">Place Order</button>
+                <button onclick="placeorder('<?=$id?>','<?=$product['id']?>')"  class="btn btn-success btn-block">Place Order</button>
             </div>
         </li>
     <?php  } ?>

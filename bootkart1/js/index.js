@@ -42,21 +42,28 @@ function addtocart(userid, productid){
     });
 }
 
-function getstudent(){
+function placeorder(userid, productid){
     $.ajax({
         type: "POST",
-        url: "test.php",
+        url: "backend/placeorder_ajax.php",
         data: {
             //data goes here
-            
+            userid,
+            productid
         },
         success: function (data) {
            //data is returned here
-           json = JSON.parse(data);
-           console.log(json);
+           if(data == 'success'){
+               alert("Order placed!");
+               window.location = 'cart.php';
+           }else{
+               alert("There was some problem, please try again later");
+           }
         }
     });
 }
+
+
 
 
 

@@ -1,5 +1,5 @@
 <?php include 'templates/header.php'; ?>
-<?php include 'backend/getproducts.php' ?>
+<?php include 'backend/getproducts.php'; ?>
 <?php $product = getsingleproduct($_GET['id']);
 $id = $_SESSION['id'];
 ?>
