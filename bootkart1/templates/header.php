@@ -1,8 +1,7 @@
 <?php
 session_start();
+include 'backend/onlyuser.php';
 ?>
-
-<?php include 'backend/onlyuser.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">

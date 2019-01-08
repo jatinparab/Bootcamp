@@ -6,7 +6,7 @@
     $sql = "INSERT INTO orders(userid,productid) VALUES ('$userid','$productid')";
     $sql2 = "DELETE FROM cart WHERE userid='$userid' AND productid='$productid'";
     $result = $conn -> query($sql);
-    $result2 = $conn ->query($sql2);
+    $result2 = $conn -> query($sql2);
     if($result && $result2){
         echo 'success';
     }

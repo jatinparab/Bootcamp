@@ -41,6 +41,28 @@ function getsingleproduct($id){
     return $row;
 }
 
+
+function getuserinfo($id){
+    include 'conn.php';
+    $sql = "SELECT * FROM login WHERE id='$id'";
+    $result = $conn -> query($sql);
+    $row = $result -> fetch_assoc();
+    return $row;
+}
+
+
+function getorders(){
+    include 'conn.php';
+    $data = array();
+    $sql = "SELECT * FROM orders";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()){
+        array_push($data,$row);
+    }
+    return $data;
+}
+
+
        
     
 ?>

@@ -1,8 +1,7 @@
 <?php
 session_start();
-
+include 'backend/onlyadmin.php';
 ?>
-<?php include 'backend/onlyadmin.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,14 +28,12 @@ session_start();
                     <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="addproducts.php">Add Products</a>
+                    <a class="nav-link" href="addproducts.php">Add Product</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?category=TVs">View Orders</a>
+                    <a class="nav-link" href="vieworders.php">View Orders</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php?category=Laptops">Laptops</a>
-                </li>
+               
 
             </ul>
 

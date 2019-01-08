@@ -54,7 +54,7 @@ function placeorder(userid, productid){
         success: function (data) {
            //data is returned here
            if(data == 'success'){
-               alert("Order placed!");
+               alert("Product ordered!");
                window.location = 'cart.php';
            }else{
                alert("There was some problem, please try again later");
@@ -91,3 +91,6 @@ function login(){
     });
     
 }
+
+
+https://m.do.co/c/1d9c6302a930
